@@ -26,7 +26,7 @@ import { EscenaComponent } from '../escena/escena.component';
 })
 export class HomeComponent implements OnInit {
   steps: iStep[] = [];
-  currentStepIndex: number = 0;
+  //currentStepIndex: number = 0;
 
   constructor(private stepsService: StepsService) { }
 
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     this.steps = this.stepsService.getSteps();
   }
 
-  nextStep(): void {
+  /*nextStep(): void {
     if (this.currentStepIndex < this.steps.length - 1) {
       this.currentStepIndex++;
     }
@@ -44,8 +44,11 @@ export class HomeComponent implements OnInit {
     if (this.currentStepIndex > 0) {
       this.currentStepIndex--;
     }
-  }
+  }*/
 }
+
+
+
 
 
 

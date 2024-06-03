@@ -34,7 +34,6 @@
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
-     
             ],
             "scripts": []
           },
@@ -89,8 +88,11 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "src/public/assets",
+                "output": "assets"
+              },
+             
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.scss"
