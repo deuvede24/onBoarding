@@ -19,7 +19,7 @@ import { iStep } from './iStep';
   providedIn: 'root'
 })
 export class StepsService {
-  private steps: iStep[] = [
+  public steps: iStep[] = [
     {
       title: 'Dedica moltes hores',
       description: 'Un mínim de 30 hores a la setmana. Si no en tens prou, hauràs de dedicar-li més hores. Al principi sembla impossible, però notaràs una millora ràpidament.',

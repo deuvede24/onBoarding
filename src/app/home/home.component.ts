@@ -1,17 +1,3 @@
-/*import { Component } from '@angular/core';
-import { EscenaComponent } from "../escena/escena.component";
-
-@Component({
-    selector: 'app-home',
-    standalone: true,
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.scss',
-    imports: [EscenaComponent]
-})
-export class HomeComponent {
-
-}*/
-
 import { Component, OnInit } from '@angular/core';
 import { StepsService } from '../steps.service';
 import { iStep } from '../iStep';
@@ -28,7 +14,7 @@ export class HomeComponent implements OnInit {
   steps: iStep[] = [];
   //currentStepIndex: number = 0;
 
-  constructor(private stepsService: StepsService) { }
+  constructor(public stepsService: StepsService) { }
 
   ngOnInit(): void {
     this.steps = this.stepsService.getSteps();
