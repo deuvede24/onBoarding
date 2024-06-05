@@ -45,9 +45,45 @@
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
-  
-  
 
   
-
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background-color: black;
+  }
+  
+  button.round-button {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button.round-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  button.round-button:enabled {
+    background-color: black;
+    color: white;
+  }
   
