@@ -14,6 +14,8 @@ export class EscenaComponent {
 
   @Input() steps: iStep[] = [];
   currentStep: number = 0;
+  
+
   //animate: any;
 
   setCurrentStepTo(index: number): void {
@@ -31,6 +33,7 @@ export class EscenaComponent {
     }
   }
 }
+
 
 
 /*constructor() { }
