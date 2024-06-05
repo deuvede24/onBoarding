@@ -39,7 +39,7 @@
         </div>
       </div>-->
       
-      <div class="escena-container d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
+     <div class="escena-container d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
@@ -54,8 +54,8 @@
                       <p class="card-text">{{ step.description }}</p>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
-                      <button class="btn btn-primary" (click)="prevStep()" [disabled]="currentStep === 0">Previous</button>
-                      <button class="btn btn-primary" (click)="nextStep()" [disabled]="currentStep === steps.length - 1">Next</button>
+                        <button class="round-button fa-solid fa-arrow-left" (click)="prevStep()" [disabled]="currentStep === 0"></button>
+                        <button class="round-button fa-solid fa-arrow-right" (click)="nextStep()" [disabled]="currentStep === steps.length - 1"></button>
                     </div>
                   </div>
                 </div>
@@ -64,6 +64,71 @@
           </div>
         </div>
       </div>
+
+
+      <!--  <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
+                      <button class="btn btn-primary" img src="/public/assets/angle-circle-left_7482884.png" (click)="prevStep()" [disabled]="currentStep === 0">Previous</button>
+                      <button class="btn btn-primary" img src="/public/assets/angle-circle-right_7482887.png" (click)="nextStep()" [disabled]="currentStep === steps.length - 1">Next</button>
+                    </div>-->
+      <!--<div class="escena-container d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
+                    <div class="card shadow">
+                        *ngFor (let step of steps; let i = index) {
+                            @if (i === currentStep) {
+                                <div class="card-header" [ngStyle]="{ 'background-color': step.bgcolor }">
+                                    <img [src]="step.img" alt="{{ step.title }}" class="card-img-top img-fluid step-image">
+                                </div>
+                                <div class="card-body" style="background-color: white;">
+                                    <h4>{{ step.title }}</h4>
+                                    <p class="card-text">{{ step.description }}</p>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
+                                    <button class="round-button fa-solid fa-arrow-left" (click)="prevStep()" [disabled]="currentStep === 0"></button>
+                                    <button class="round-button fa-solid fa-arrow-right" (click)="nextStep()" [disabled]="currentStep === steps.length - 1"></button>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+  <!--  <div class="d-flex align-items-center vh-100">
+        <div [@animSlider]="currentStep"
+          class="card rounded-5 col-6 col-md-4 col-xl-3 my-auto mx-auto shadow border-0 overflow-hidden">
+          <div class="card-img-top" [style.backgroundColor]="steps[currentStep].bgcolor">
+            <img [src]="steps[currentStep].img" class="h-100 w-100 py-4 py-md-5 px-2 px-md-4 overflow-hidden">
+          </div>
+          <div class="card-body">
+            <h6 class="card-title strong hs">{{steps[currentStep].title}}</h6>
+            <p class="card-text small fs">{{steps[currentStep].description}}</p>
+            <div class="d-flex mb-1 mb-md-4 align-items-center">
+              <div id="indicators" class="col-3 d-flex justify-content-between">
+                @for (let step of steps; let i = index) {
+                  <button (click)="cS(i)" type="button" [id]="i"
+                    [class]="{'active': currentStep === i}"></button>
+                }
+              </div>
+              <div class="py-3 ms-auto">
+                @if(currentStep > 0 && currentStep <= steps.length-1) {
+                  <button (click)="previous()" type="button"
+                    class="btn btn-outline-dark rounded-circle me-2"><img src="../../../assets/images/arrow_l.svg"></button>
+                }
+                @if(currentStep >= 0 && currentStep < steps.length-1) {
+                  <button (click)="next()" type="button"
+                    class="btn btn-dark rounded-circle"><img src="../../../assets/images/arrow_r.svg"></button>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    -->
+    
+      
       
       
   <!--<div class="escena-container d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
@@ -104,4 +169,4 @@
         </div>
       </div>
       
-      -->   
+    -->

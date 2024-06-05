@@ -11,15 +11,16 @@ import { iStep } from '../iStep';
   styleUrls: ['./escena.component.scss']
 })
 export class EscenaComponent {
+
   @Input() steps: iStep[] = [];
   currentStep: number = 0;
-animate: any;
+  //animate: any;
 
   setCurrentStepTo(index: number): void {
     this.currentStep = index;
   }
   nextStep(): void {
-    if (this.currentStep< this.steps.length - 1) {
+    if (this.currentStep < this.steps.length - 1) {
       this.currentStep++;
     }
   }
