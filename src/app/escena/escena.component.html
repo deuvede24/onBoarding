@@ -2,44 +2,9 @@
 <p>Un mínim de 30 hores a la setmana. Si no en tens prou, hauràs de dedicar-li més hores. Al principi sembla impossible,
     però notaràs una millora ràpidament.</p>-->
 
-   <!-- <div class="escena-container">
-        <div *ngFor="let step of steps" class="card shadow mb-3">
-          <div class="card-header" [ngStyle]="{ 'background-color': step.bgcolor }">
-            <img [src]="step.img" alt="{{ step.title }}" class="card-img-top img-fluid">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{ step.title }}</h5>
-            <p class="card-text">{{ step.description }}</p>
-          </div>
-        </div>
-      </div>-->
 
-   <!-- <div class="escena-container">
-        <div *ngFor="let step of steps" class="card shadow mb-3">
-          <div class="card-body">
-            <h5 class="card-title">{{ step.title }}</h5>
-            <p class="card-text">{{ step.description }}</p>
-          </div>
-        </div>
-      </div>-->
-
-    <!--<div class="escena-container" *ngIf="steps.length">
-        <div class="card shadow mb-3">
-          <div class="card-header" [ngStyle]="{ 'background-color': steps[currentStep].bgcolor }">
-            <img [src]="steps[currentStep].img" alt="{{ steps[currentStep].title }}" class="card-img-top img-fluid">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{ steps[currentStep].title }}</h5>
-            <p class="card-text">{{ steps[currentStep].description }}</p>
-          </div>
-        </div>
-        <div class="navigation-buttons">
-          <button (click)="prevStep()" [disabled]="currentStep === 0">Previous</button>
-          <button (click)="nextStep()" [disabled]="currentStep === steps.length - 1">Next</button>
-        </div>
-      </div>-->
-      
-     <!--<div class="escena-container d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
+    
+   <!-- <div class="escena-container d-flex justify-content-center align-items-center">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
@@ -54,8 +19,13 @@
                       <p class="card-text">{{ step.description }}</p>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
+                      <div class="indicator-container">
+                        <div *ngFor="let indicator of steps; let j = index" class="indicator" [class.active]="j === currentStep" (click)="setCurrentStepTo(j)"></div>
+                      </div>
+                      <div class="button-container">
                         <button class="round-button fa-solid fa-arrow-left" (click)="prevStep()" [disabled]="currentStep === 0"></button>
                         <button class="round-button fa-solid fa-arrow-right" (click)="nextStep()" [disabled]="currentStep === steps.length - 1"></button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -64,131 +34,30 @@
           </div>
         </div>
       </div>-->
-      <div class="escena-container d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-              <div class="card shadow" style="border-radius: 20px; overflow: hidden;">
-                <div class="card-header p-0" [ngStyle]="{ 'background-color': steps[currentStep].bgcolor }">
-                  <img [src]="steps[currentStep].img" alt="{{ steps[currentStep].title }}" class="card-img-top img-fluid step-image">
-                </div>
-                <div class="card-body" style="background-color: white;">
-                  <h4>{{ steps[currentStep].title }}</h4>
-                  <p class="card-text">{{ steps[currentStep].description }}</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center"
-                  style="background-color: white;">
-                  <button class="round-button fa-solid fa-arrow-left" (click)="prevStep()"
-                    [disabled]="currentStep === 0"></button>
-                  <div class="d-flex justify-content-center flex-grow-1">
-                    <div *ngFor="let step of steps; let i = index" (click)="setCurrentStepTo(i)" class="indicator mx-1"
-                      [ngClass]="{'active': currentStep === i}"></div>
-                  </div>
-                  <button class="round-button fa-solid fa-arrow-right" (click)="nextStep()"
-                    [disabled]="currentStep === steps.length - 1"></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       
 
-
-      <!--  <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
-                      <button class="btn btn-primary" img src="/public/assets/angle-circle-left_7482884.png" (click)="prevStep()" [disabled]="currentStep === 0">Previous</button>
-                      <button class="btn btn-primary" img src="/public/assets/angle-circle-right_7482887.png" (click)="nextStep()" [disabled]="currentStep === steps.length - 1">Next</button>
-                    </div>-->
-      <!--<div class="escena-container d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-                    <div class="card shadow">
-                        *ngFor (let step of steps; let i = index) {
-                            @if (i === currentStep) {
-                                <div class="card-header" [ngStyle]="{ 'background-color': step.bgcolor }">
-                                    <img [src]="step.img" alt="{{ step.title }}" class="card-img-top img-fluid step-image">
-                                </div>
-                                <div class="card-body" style="background-color: white;">
-                                    <h4>{{ step.title }}</h4>
-                                    <p class="card-text">{{ step.description }}</p>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
-                                    <button class="round-button fa-solid fa-arrow-left" (click)="prevStep()" [disabled]="currentStep === 0"></button>
-                                    <button class="round-button fa-solid fa-arrow-right" (click)="nextStep()" [disabled]="currentStep === steps.length - 1"></button>
-                                </div>
-                            }
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
-  <!--  <div class="d-flex align-items-center vh-100">
-        <div [@animSlider]="currentStep"
-          class="card rounded-5 col-6 col-md-4 col-xl-3 my-auto mx-auto shadow border-0 overflow-hidden">
-          <div class="card-img-top" [style.backgroundColor]="steps[currentStep].bgcolor">
-            <img [src]="steps[currentStep].img" class="h-100 w-100 py-4 py-md-5 px-2 px-md-4 overflow-hidden">
-          </div>
-          <div class="card-body">
-            <h6 class="card-title strong hs">{{steps[currentStep].title}}</h6>
-            <p class="card-text small fs">{{steps[currentStep].description}}</p>
-            <div class="d-flex mb-1 mb-md-4 align-items-center">
-              <div id="indicators" class="col-3 d-flex justify-content-between">
-                @for (let step of steps; let i = index) {
-                  <button (click)="cS(i)" type="button" [id]="i"
-                    [class]="{'active': currentStep === i}"></button>
-                }
-              </div>
-              <div class="py-3 ms-auto">
-                @if(currentStep > 0 && currentStep <= steps.length-1) {
-                  <button (click)="previous()" type="button"
-                    class="btn btn-outline-dark rounded-circle me-2"><img src="../../../assets/images/arrow_l.svg"></button>
-                }
-                @if(currentStep >= 0 && currentStep < steps.length-1) {
-                  <button (click)="next()" type="button"
-                    class="btn btn-dark rounded-circle"><img src="../../../assets/images/arrow_r.svg"></button>
-                }
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    -->
-    
-      
-      
-      
-  <!--<div class="escena-container d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
+      <div class="escena-container d-flex justify-content-center align-items-center">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
               <div class="card shadow">
-                <div *ngIf="animate" class="card-content animation-step-{{currentStep}}">
-                  <div class="card-header" [ngStyle]="{ 'background-color': steps[currentStep].bgcolor }">
-                    <img [src]="steps[currentStep].img" alt="{{ steps[currentStep].title }}" class="card-img-top img-fluid step-image">
-                  </div>
-                  <div class="card-body" style="background-color: white;">
-                    <p class="card-title" style="text-align: left; font-size: 14px; font-weight: bold; margin-top: 10px; margin-bottom: 7px;">{{ steps[currentStepIndex].title }}</p>
-                    <p class="card-text">{{ steps[currentStep].description }}</p>
-                  </div>
-                  <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
-                    <div class="scroll d-flex">
-                      <div
-                        *ngFor="let step of steps; let i = index"
-                        class="ball"
-                        [ngClass]="{ 'rounded-pill': currentStep === i, active: currentStep === i }"
-                        (click)="setCurrentStepTo(i)">
-                      </div>
+                <div *ngFor="let step of steps; let i = index">
+                  <div *ngIf="i === currentStep">
+                    <div class="card-header" [ngStyle]="{ 'background-color': step.bgcolor }">
+                      <img [src]="step.img" alt="{{ step.title }}" class="card-img-top img-fluid step-image">
                     </div>
-                    <div class="d-flex align-items-center">
-                      <button class="custom-btn btn btn-light" (click)="prevStep()" [disabled]="currentStep === 0">
-                        <img class="btn-img" src="assets/left-arrow.svg" alt="Flecha izquierda">
-                      </button>
-                      <button class="custom-btn btn btn-light" (click)="nextStep()" [disabled]="currentStep === steps.length - 1">
-                        <img class="btn-img" src="assets/right-arrow.svg" alt="Flecha derecha">
-                      </button>
+                    <div class="card-body" style="background-color: white;">
+                      <h4>{{ step.title }}</h4>
+                      <p class="card-text">{{ step.description }}</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
+                      <div class="indicator-container">
+                        <div *ngFor="let indicator of steps; let j = index" class="indicator" [class.active]="j === currentStep" (click)="setCurrentStepTo(j)"></div>
+                      </div>
+                      <div class="button-container">
+                        <button *ngIf="currentStep > 0" class="round-button fa-solid fa-arrow-left" (click)="prevStep()"></button>
+                        <button *ngIf="currentStep < steps.length - 1" class="round-button fa-solid fa-arrow-right" (click)="nextStep()"></button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -198,4 +67,4 @@
         </div>
       </div>
       
-    -->
+      
