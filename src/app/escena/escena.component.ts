@@ -14,7 +14,7 @@ export class EscenaComponent {
 
   @Input() steps: iStep[] = [];
   currentStep: number = 0;
-  
+
 
   //animate: any;
 
