@@ -58,7 +58,7 @@ export class StepsService {
     {
       title: 'Dedica moltes hores',
       description: 'Un mínim de 30 hores a la setmana. Si no en tens prou, hauràs de dedicar-li més hores. Al principi sembla impossible, però notaràs una millora ràpidament.',
-      img: 'assets/meditation.svg',
+      img: 'assets/time_managment.svg',
       bgcolor: '#6EC1E4'
     },
     {
@@ -70,7 +70,7 @@ export class StepsService {
     {
       title: 'Procura descansar',
       description: 'Descansar bé i desconnectar són vitals. D\'aquesta manera reduiràs l\'estrès i l\'ansietat. Milloraràs la teva concentració i consolidaràs el teu aprenentatge.',
-      img: 'assets/time_managment.svg',
+      img: 'assets/meditation.svg',
       bgcolor: '#F9D56E'
     }
   ];
