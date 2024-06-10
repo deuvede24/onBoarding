@@ -8,9 +8,9 @@
 
 .card {
   width: 100%;
-  max-width: 350px; // Ajusta este valor según sea necesario
-  height: 600px; // Ajusta la altura total según sea necesario
-  border-radius: 15px; // Redondear las esquinas
+  max-width: 350px; 
+  height: 600px; 
+  border-radius: 15px; // Redondear esquinas
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,31 +24,31 @@
 
 .card-header img {
   width: 100%;
-  height: 300px; // Aumentar la altura de la imagen
+  height: 300px; 
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  object-fit: cover; // Asegura que la imagen cubra el contenedor sin distorsionarse
+  object-fit: cover; // Asegura imagen en contenedor sin distorsiones
 }
 
 .card-body {
-  min-height: 150px; // Ajusta según sea necesario
-  padding: 1.5rem; // Añadir padding para espacio interno
+  min-height: 150px; 
+  padding: 1.5rem; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: left; // Justificar el texto a la izquierda
+  text-align: left; 
   flex-grow: 1;
 }
 
 .card-title {
-  font-size: 1rem; // Ajusta el tamaño de la letra aquí
+  font-size: 1rem; 
   font-weight: bold;
 }
 
 .card-text {
-  font-size: 0.875rem; // Ajusta el tamaño de la letra aquí
+  font-size: 0.875rem; 
   color: #555;
-  text-align: left; // Justificar el texto a la izquierda
+  text-align: left; 
 }
 
 .card-footer {
