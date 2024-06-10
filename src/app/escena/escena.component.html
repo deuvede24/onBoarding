@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-        <div class="card shadow">
+        <div class="card shadow position-absolute w-100" [@slideInOut]="currentStep">
           @for (step of steps; track $index) {
           @if ($index === currentStep) {
           <div class="card-header" [ngStyle]="{ 'background-color': step.bgcolor }">
@@ -39,3 +39,4 @@
     </div>
   </div>
 </div>
+
