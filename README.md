@@ -1,27 +1,42 @@
-# OnBoarding
+# ONBoarding
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+## SPRINT5
 
-## Development server
+### Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este proyecto es una plicación que tiene como objetivo mostrar un Onboarding digital mediante tres escenas. Cada escena contiene un título, un texto y una imagen, la aplicación permite avanzar o retroceder entre las frases, utilizando botones de navegación. Para su implementación se utiliza HTML, CSS, Bootstrap y Angular.
 
-## Code scaffolding
+### Conocimientos/Tecnologías
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- HTML, SASS y Bootstrap 5
+- Creación de Componentes
+- Creación de Interfaces
+- Creación de Servicios
+- Paso de variables entre Padre-Hijo
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Características
 
-## Running unit tests
+- Tres escenas con distinto título, texto e imagen.
+- Navegación entre escenas mediante botones.
+- Uso de Angular para la creación de componentes y servicios.
+- Interfaz de usuario estilizada con Bootstrap.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instalación
 
-## Running end-to-end tests
+Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Clona el repositorio
+git clone https://github.com/tu-usuario/ONBoarding.git
 
-## Further help
+# Ingresa al directorio del proyecto
+cd ONBoarding
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Instala las dependencias
+npm install
+
+# Compila el código TypeScript
+npx ng build
+
+# Inicia la aplicación
+ng serve 
