@@ -22,21 +22,21 @@ Este proyecto es una plicación que tiene como objetivo mostrar un Onboarding di
 - Uso de Angular para la creación de componentes y servicios.
 - Interfaz de usuario estilizada con Bootstrap.
 
-## Instalación
+# Instalación
 
 Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
 
-# Clona el repositorio
+## Clona el repositorio
 git clone https://github.com/tu-usuario/ONBoarding.git
 
-# Ingresa al directorio del proyecto
+## Ingresa al directorio del proyecto
 cd ONBoarding
 
-# Instala las dependencias
+## Instala las dependencias
 npm install
 
-# Compila el código TypeScript
+## Compila el código TypeScript
 npx ng build
 
-# Inicia la aplicación
+## Inicia la aplicación
 ng serve 
